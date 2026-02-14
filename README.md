@@ -1,36 +1,73 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# leonelulloa.com
 
-## Getting Started
+Personal brand website for Leonel Ulloa — AI, Marketing & Business.
 
-First, run the development server:
+Built with Next.js 16, TypeScript, Tailwind CSS v4. Bilingual EN/ES with smart social links.
+
+## Local Development
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) — it will redirect to `/en` or `/es` based on your browser language.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Environment Variables
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Copy `.env.example` to `.env.local` and fill in your Supabase credentials:
 
-## Learn More
+```bash
+cp .env.example .env.local
+```
 
-To learn more about Next.js, take a look at the following resources:
+Required variables:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+| Variable | Description |
+|---|---|
+| `NEXT_PUBLIC_SUPABASE_URL` | Supabase project URL |
+| `NEXT_PUBLIC_SUPABASE_ANON_KEY` | Supabase anon/public key |
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Supabase Setup
 
-## Deploy on Vercel
+Run the SQL migration in your Supabase SQL Editor:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```
+supabase/migrations/001_newsletter_signups.sql
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+This creates the `newsletter_signups` table for the newsletter form.
+
+## Deploy to Cloudflare Pages
+
+1. Connect the GitHub repo to Cloudflare Pages
+2. Build settings:
+   - **Framework preset:** Next.js
+   - **Build command:** `npm run build`
+   - **Output directory:** `.next`
+3. Add environment variables in Cloudflare Pages settings:
+   - `NEXT_PUBLIC_SUPABASE_URL`
+   - `NEXT_PUBLIC_SUPABASE_ANON_KEY`
+
+## Project Structure
+
+```
+src/
+  app/
+    [lang]/          # Bilingual routing (/en, /es)
+      layout.tsx     # Per-language layout + SEO metadata
+      page.tsx       # Homepage
+    api/newsletter/  # Newsletter signup API
+    globals.css      # All styling
+    robots.ts        # robots.txt
+    sitemap.ts       # sitemap.xml
+  components/        # UI components
+  config/
+    copy.ts          # All bilingual copy
+    social.ts        # Social links (language-aware)
+  lib/
+    supabase.ts      # Supabase client
+  middleware.ts      # Language detection + redirect
+supabase/
+  migrations/        # SQL migrations
+```
