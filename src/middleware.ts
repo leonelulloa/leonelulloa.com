@@ -29,6 +29,9 @@ export function middleware(req: NextRequest) {
     pathname.startsWith("/favicon") ||
     pathname.startsWith("/prompts") ||
     pathname.startsWith("/p/") ||
+    pathname.startsWith("/privacy") ||
+    pathname.startsWith("/terms") ||
+    pathname.startsWith("/data-deletion") ||
     pathname.includes(".")
   ) {
     return NextResponse.next();
