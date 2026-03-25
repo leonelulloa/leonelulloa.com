@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { FadeIn, GlowCard, Particles, GlobalStyles } from "./Effects";
+import TechMarquee from "./TechMarquee";
 
 export const metadata: Metadata = {
   title: "Leonel Ulloa — Systems Portfolio",
@@ -154,25 +155,11 @@ export default function PortfolioHub() {
           </FadeIn>
 
           {/* Tech stack */}
-          <FadeIn delay={350}>
-            <div style={{
-              display: "flex", alignItems: "center", gap: 16, flexWrap: "wrap",
-              padding: "12px 0", borderTop: `1px solid ${C.border}`,
-            }}>
-              <span style={{ fontSize: 10, fontFamily: C.mono, color: C.dim, textTransform: "uppercase", letterSpacing: "0.15em" }}>built with</span>
-              {[
-                ["Next.js 16", C.text], ["React 19", C.blue], ["TypeScript", C.blue], ["Supabase", C.green],
-                ["PostgreSQL", C.blue], ["Tailwind v4", C.teal], ["Stripe", C.accent], ["Cloudflare R2", C.orange],
-                ["Redis", C.red], ["Docker", C.blue], ["n8n", C.orange], ["Remotion", C.accent],
-                ["FFmpeg", C.green], ["Fabric.js", C.gold], ["Satori", C.teal],
-                ["Claude API", C.accent], ["OpenAI", C.green], ["Gemini", C.blue],
-              ].map(([name, color]) => (
-                <span key={name as string} style={{ fontSize: 11, fontFamily: C.mono, color: color as string, opacity: 0.6 }}>{name as string}</span>
-              ))}
-            </div>
-          </FadeIn>
         </div>
       </section>
+
+      {/* ═══ TECH MARQUEE ═══ */}
+      <TechMarquee />
 
       {/* ═══════════════════════════════════════════
           TWO SYSTEMS — The proof

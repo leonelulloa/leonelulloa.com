@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import { FadeIn, Stagger, Counter, GlowCard, Particles, GlobalStyles } from "../Effects";
+import { PipelineFlowDiagram, TechEcosystem } from "./PipelineVisual";
+import InfraDashboard from "./InfraDashboard";
 
 export const metadata: Metadata = {
   title: "L7AI Content Intelligence Pipeline — Leonel Ulloa Portfolio",
@@ -35,6 +37,14 @@ export default function PipelinePage() {
       ══════════════════════════════════════════ */}
       <section style={{ position: "relative", padding: "80px 5% 60px", overflow: "hidden" }}>
         <Particles count={20} />
+        {/* Hero background image — blurred and faded */}
+        <div style={{
+          position: "absolute", top: -100, right: -100, width: 500, height: 500,
+          backgroundImage: "url(/images/l7ai-hero.jpg)",
+          backgroundSize: "cover", backgroundPosition: "center",
+          opacity: 0.08, filter: "blur(40px)",
+          borderRadius: "50%", pointerEvents: "none",
+        }} />
         <div style={{ position: "relative", zIndex: 1, maxWidth: 1200, margin: "0 auto" }}>
           <a href="/portfolio" style={{ fontSize: 12, color: C.muted, textDecoration: "none", display: "inline-flex", alignItems: "center", gap: 6, marginBottom: 24 }}>
             ← Back to Portfolio
@@ -42,7 +52,16 @@ export default function PipelinePage() {
 
           <FadeIn>
             <div style={{ display: "flex", alignItems: "center", gap: 16, marginBottom: 16 }}>
-              <div style={{ width: 56, height: 56, borderRadius: 14, background: `linear-gradient(135deg, ${C.teal}, ${C.green})`, display: "flex", alignItems: "center", justifyContent: "center", fontSize: 28 }}>🔄</div>
+              {/* L7AI icon from generated image */}
+              <div style={{
+                width: 56, height: 56, borderRadius: 14, overflow: "hidden",
+                border: "2px solid rgba(0,209,178,0.3)",
+                boxShadow: "0 0 20px rgba(0,209,178,0.15)",
+                flexShrink: 0,
+              }}>
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img src="/images/l7ai-icon.jpg" alt="L7AI" width={56} height={56} style={{ width: 56, height: 56, objectFit: "cover", objectPosition: "center" }} />
+              </div>
               <div>
                 <h1 style={{ fontSize: 36, fontWeight: 800, margin: 0, letterSpacing: "-0.02em" }}>
                   L7AI Content Intelligence Pipeline
@@ -85,6 +104,19 @@ export default function PipelinePage() {
               ))}
             </div>
           </FadeIn>
+        </div>
+      </section>
+
+      {/* ══════════════════════════════════════════
+          VISUAL PIPELINE OVERVIEW — Premium glassmorphism
+      ══════════════════════════════════════════ */}
+      <section style={{ padding: "56px 5% 64px", borderTop: `1px solid ${C.border}`, background: "linear-gradient(180deg, rgba(0,209,178,0.04) 0%, rgba(124,92,255,0.02) 50%, transparent 100%)", position: "relative", overflow: "hidden" }}>
+        {/* Background glow orbs */}
+        <div style={{ position: "absolute", top: -100, left: "10%", width: 300, height: 300, background: "radial-gradient(circle, rgba(59,130,246,0.08), transparent 70%)", borderRadius: "50%", pointerEvents: "none" }} />
+        <div style={{ position: "absolute", bottom: -100, right: "10%", width: 300, height: 300, background: "radial-gradient(circle, rgba(34,197,94,0.08), transparent 70%)", borderRadius: "50%", pointerEvents: "none" }} />
+
+        <div style={{ maxWidth: 1200, margin: "0 auto", position: "relative", zIndex: 1 }}>
+          <PipelineFlowDiagram />
         </div>
       </section>
 
@@ -315,40 +347,14 @@ export default function PipelinePage() {
           <FadeIn>
             <SectionHeader icon="🖥️" title="Infrastructure — $43/month Total" color={C.teal} />
             <p style={{ fontSize: 14, color: C.muted, maxWidth: 700, margin: "8px 0 24px" }}>
-              Two Hetzner servers running 24 Docker containers. Self-hosted everything — no vendor lock-in, full control, fraction of the cost of cloud equivalents.
+              Two Hetzner servers running Docker containers. Self-hosted everything — no vendor lock-in, full control, fraction of the cost of cloud equivalents.
+              <strong style={{ color: C.teal }}> This data is live from the actual servers.</strong>
             </p>
           </FadeIn>
 
+          {/* LIVE INFRASTRUCTURE DASHBOARD */}
           <FadeIn delay={100}>
-            <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 24 }}>
-              {/* Server 1 */}
-              <div style={{ background: C.panel, border: `1px solid ${C.border}`, borderRadius: 16, padding: 24, borderTop: `3px solid ${C.teal}` }}>
-                <div style={{ display: "flex", justifyContent: "space-between", alignItems: "baseline", marginBottom: 12 }}>
-                  <h4 style={{ fontSize: 16, fontWeight: 600, margin: 0 }}>Server 1 — Production</h4>
-                  <span style={{ fontSize: 11, color: C.teal, fontFamily: C.mono }}>CPX52 · 12vCPU · 24GB</span>
-                </div>
-                <p style={{ fontSize: 12, color: C.muted, margin: "0 0 12px" }}>IP: 46.225.94.9 · ~$28/mo</p>
-                <div style={{ display: "flex", flexWrap: "wrap", gap: 6 }}>
-                  {["n8n", "Remotion Renderer", "Browserless Chrome", "leonelulloa.com", "PostgreSQL", "Redis", "Coolify", "Traefik"].map(s => (
-                    <Tag key={s} c={C.teal}>{s}</Tag>
-                  ))}
-                </div>
-              </div>
-
-              {/* Server 2 */}
-              <div style={{ background: C.panel, border: `1px solid ${C.border}`, borderRadius: 16, padding: 24, borderTop: `3px solid ${C.green}` }}>
-                <div style={{ display: "flex", justifyContent: "space-between", alignItems: "baseline", marginBottom: 12 }}>
-                  <h4 style={{ fontSize: 16, fontWeight: 600, margin: 0 }}>Server 2 — Publishing</h4>
-                  <span style={{ fontSize: 11, color: C.green, fontFamily: C.mono }}>CPX31 · 4vCPU · 8GB</span>
-                </div>
-                <p style={{ fontSize: 12, color: C.muted, margin: "0 0 12px" }}>IP: 91.99.202.63 · ~$15/mo</p>
-                <div style={{ display: "flex", flexWrap: "wrap", gap: 6 }}>
-                  {["Postiz", "Temporal (standby)", "PostgreSQL", "Redis", "Elasticsearch", "Coolify", "Traefik"].map(s => (
-                    <Tag key={s} c={C.green}>{s}</Tag>
-                  ))}
-                </div>
-              </div>
-            </div>
+            <InfraDashboard />
           </FadeIn>
 
           <FadeIn delay={200}>
@@ -388,22 +394,12 @@ export default function PipelinePage() {
       </section>
 
       {/* ══════════════════════════════════════════
-          TECHNOLOGY STACK
+          TECHNOLOGY ECOSYSTEM — Premium visual
       ══════════════════════════════════════════ */}
-      <section style={{ padding: "60px 5%", borderTop: `1px solid ${C.border}` }}>
-        <div style={{ maxWidth: 1200, margin: "0 auto" }}>
-          <FadeIn>
-            <SectionHeader icon="⚙️" title="Technology Stack" color={C.blue} />
-          </FadeIn>
-
-          <FadeIn delay={100}>
-            <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 12, marginTop: 24 }}>
-              <TechCard category="Orchestration" items={["n8n (26 workflows)", "Temporal (standby)", "Coolify", "Traefik"]} color={C.teal} />
-              <TechCard category="Database & Storage" items={["Supabase (PostgreSQL)", "Cloudflare R2", "Google Drive", "Redis"]} color={C.accent} />
-              <TechCard category="Media Production" items={["Remotion 4.0", "FFmpeg", "Browserless Chrome", "Satori"]} color={C.orange} />
-              <TechCard category="AI Services" items={["Claude API (strategy)", "OpenAI TTS/Whisper", "ElevenLabs", "FLUX/fal.ai", "Kling/Runway", "Stability AI", "Pexels/Pixabay"]} color={C.pink} />
-            </div>
-          </FadeIn>
+      <section style={{ padding: "60px 5%", borderTop: `1px solid ${C.border}`, position: "relative", overflow: "hidden" }}>
+        <div style={{ position: "absolute", top: -80, left: "50%", width: 400, height: 400, background: "radial-gradient(circle, rgba(124,92,255,0.06), transparent 70%)", borderRadius: "50%", transform: "translateX(-50%)", pointerEvents: "none" }} />
+        <div style={{ maxWidth: 1200, margin: "0 auto", position: "relative", zIndex: 1 }}>
+          <TechEcosystem />
         </div>
       </section>
 
