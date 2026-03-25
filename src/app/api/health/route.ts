@@ -29,7 +29,9 @@ const CHECKS = [
   { name: "Website", url: "https://leonelulloa.com", category: "Frontend" },
   { name: "n8n Orchestrator", url: process.env.N8N_HEALTH_URL || "https://n8n.leonelulloa.com", category: "Automation" },
   { name: "Postiz Publisher", url: process.env.POSTIZ_HEALTH_URL || "https://postiz.leonelulloa.com", category: "Publishing" },
-  { name: "Content Database", url: process.env.SUPABASE_HEALTH_URL || `https://${process.env.NEXT_PUBLIC_SUPABASE_URL || "cfcifejvrztahhwhuocu.supabase.co"}/auth/v1/health`, category: "Database" },
+  // Database check uses internal API — Supabase URL not reachable directly from Hetzner (IPv4/CDN issue)
+  // Instead we check our own API endpoint that queries Supabase through the app's connection
+  { name: "Content Database", url: process.env.SITE_URL ? `${process.env.SITE_URL}/api/track` : "https://leonelulloa.com/api/track", category: "Database" },
 ];
 
 async function checkService(check: typeof CHECKS[0]): Promise<ServiceStatus> {

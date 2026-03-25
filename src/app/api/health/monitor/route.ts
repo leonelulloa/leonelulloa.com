@@ -21,7 +21,7 @@ const SERVICES = [
   { name: "Website", url: "https://leonelulloa.com", critical: true },
   { name: "n8n", url: process.env.N8N_HEALTH_URL || "https://n8n.leonelulloa.com", critical: true },
   { name: "Postiz", url: process.env.POSTIZ_HEALTH_URL || "https://postiz.leonelulloa.com", critical: false },
-  { name: "Database", url: `https://${process.env.NEXT_PUBLIC_SUPABASE_URL || "cfcifejvrztahhwhuocu.supabase.co"}/auth/v1/health`, critical: true },
+  { name: "Database", url: process.env.SITE_URL ? `${process.env.SITE_URL}/api/track` : "https://leonelulloa.com/api/track", critical: true },
 ];
 
 async function checkService(service: typeof SERVICES[0]): Promise<{ name: string; up: boolean; ms: number; critical: boolean }> {
