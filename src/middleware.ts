@@ -32,6 +32,9 @@ export function middleware(req: NextRequest) {
     pathname.startsWith("/privacy") ||
     pathname.startsWith("/terms") ||
     pathname.startsWith("/data-deletion") ||
+    pathname.startsWith("/resume") ||
+    pathname.startsWith("/portfolio") ||
+    pathname.startsWith("/status") ||
     pathname.includes(".")
   ) {
     return NextResponse.next();
