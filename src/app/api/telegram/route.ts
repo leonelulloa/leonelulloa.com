@@ -39,7 +39,7 @@ async function checkService(service: typeof SERVICES[0]) {
     });
     clearTimeout(timeout);
     const ms = Math.round(performance.now() - start);
-    const up = res.ok || res.status === 401 || res.status === 403;
+    const up = res.ok || res.status === 401 || res.status === 403 || res.status === 405;
     return { name: service.name, up, ms };
   } catch {
     return { name: service.name, up: false, ms: Math.round(performance.now() - start) };

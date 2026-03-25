@@ -51,7 +51,7 @@ async function checkService(check: typeof CHECKS[0]): Promise<ServiceStatus> {
 
     return {
       name: check.name,
-      status: res.ok || res.status === 401 || res.status === 403 ? "operational" : "degraded",
+      status: res.ok || res.status === 401 || res.status === 403 || res.status === 405 ? "operational" : "degraded",
       responseMs,
       category: check.category,
     };

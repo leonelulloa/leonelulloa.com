@@ -36,7 +36,7 @@ async function checkService(service: typeof SERVICES[0]): Promise<{ name: string
     });
     clearTimeout(timeout);
     const ms = Math.round(performance.now() - start);
-    return { name: service.name, up: res.ok || res.status === 401 || res.status === 403, ms, critical: service.critical };
+    return { name: service.name, up: res.ok || res.status === 401 || res.status === 403 || res.status === 405, ms, critical: service.critical };
   } catch {
     return { name: service.name, up: false, ms: Math.round(performance.now() - start), critical: service.critical };
   }
