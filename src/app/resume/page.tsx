@@ -76,7 +76,6 @@ export default function ResumePage() {
             <span>leonel090810@gmail.com</span>
             <span>leonelulloa.com</span>
             <span>github.com/leonelulloa</span>
-            <span>github.com/L715Studio</span>
             <span>linkedin.com/in/leonel-ulloa-ai</span>
           </div>
         </header>
@@ -241,8 +240,11 @@ export default function ResumePage() {
             paddingTop: 16,
           }}
         >
+          <p style={{ margin: "0 0 4px" }}>
+            Portfolio with live proof: leonelulloa.com/portfolio
+          </p>
           <p style={{ margin: 0 }}>
-            Live demos, system walkthroughs, and references available on request.
+            Live demos, system walkthroughs, private repository access, and references available on request.
           </p>
         </footer>
       </div>
