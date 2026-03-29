@@ -447,6 +447,89 @@ export default function PipelinePage() {
       </section>
 
       {/* ══════════════════════════════════════════
+          PROOF — SCREENSHOTS & LIVE DATA
+      ══════════════════════════════════════════ */}
+      <section style={{ padding: "60px 5%", borderTop: `1px solid ${C.border}` }}>
+        <FadeIn>
+          <div style={{ textAlign: "center", marginBottom: 40 }}>
+            <h2 style={{ fontSize: 28, fontWeight: 700, margin: "0 0 8px" }}>Proof — Live System Screenshots</h2>
+            <p style={{ fontSize: 14, color: C.muted, margin: 0 }}>Real screenshots from production dashboards. URL bars visible. Timestamps verifiable.</p>
+          </div>
+
+          {/* n8n Workflows */}
+          <div style={{ marginBottom: 40 }}>
+            <h3 style={{ fontSize: 16, fontWeight: 600, marginBottom: 16, color: C.teal }}>n8n Automation Platform</h3>
+            <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 16, marginBottom: 16 }}>
+              <div>
+                <p style={{ fontSize: 11, color: C.muted, margin: "0 0 6px" }}>27 workflows — 0% failure rate — 60.58s avg run time</p>
+                <img src="/images/proof/n8n-workflows-list.png" alt="n8n workflow list showing 27 active workflows" style={{ width: "100%", borderRadius: 10, border: `1px solid ${C.border}` }} loading="lazy" />
+              </div>
+              <div>
+                <p style={{ fontSize: 11, color: C.muted, margin: "0 0 6px" }}>Execution log — all green, running every 5 minutes</p>
+                <img src="/images/proof/n8n-executions-log.png" alt="n8n execution log showing successful runs" style={{ width: "100%", borderRadius: 10, border: `1px solid ${C.border}` }} loading="lazy" />
+              </div>
+            </div>
+            <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: 16 }}>
+              <div>
+                <p style={{ fontSize: 11, color: C.muted, margin: "0 0 6px" }}>WF10 — Production Pipeline (12 nodes)</p>
+                <img src="/images/proof/n8n-wf10-production-pipeline.png" alt="WF10 Production Pipeline workflow" style={{ width: "100%", borderRadius: 10, border: `1px solid ${C.border}` }} loading="lazy" />
+              </div>
+              <div>
+                <p style={{ fontSize: 11, color: C.muted, margin: "0 0 6px" }}>WF-ShortVideo — Reel Production</p>
+                <img src="/images/proof/n8n-wf-shortvideo.png" alt="Short video production workflow" style={{ width: "100%", borderRadius: 10, border: `1px solid ${C.border}` }} loading="lazy" />
+              </div>
+              <div>
+                <p style={{ fontSize: 11, color: C.muted, margin: "0 0 6px" }}>WF7 — YouTube Comments Collector</p>
+                <img src="/images/proof/n8n-wf7-youtube-comments.png" alt="YouTube comments collector workflow" style={{ width: "100%", borderRadius: 10, border: `1px solid ${C.border}` }} loading="lazy" />
+              </div>
+              <div>
+                <p style={{ fontSize: 11, color: C.muted, margin: "0 0 6px" }}>WF-VOICE-GEN — Voice Generation</p>
+                <img src="/images/proof/n8n-wf-voice-gen.png" alt="Voice generation workflow" style={{ width: "100%", borderRadius: 10, border: `1px solid ${C.border}` }} loading="lazy" />
+              </div>
+              <div>
+                <p style={{ fontSize: 11, color: C.muted, margin: "0 0 6px" }}>WF-VIDEO-COMPOSE — Video Compositor</p>
+                <img src="/images/proof/n8n-wf-video-compose.png" alt="Video compositor workflow" style={{ width: "100%", borderRadius: 10, border: `1px solid ${C.border}` }} loading="lazy" />
+              </div>
+              <div>
+                <p style={{ fontSize: 11, color: C.muted, margin: "0 0 6px" }}>WF-MEDIA-INGEST — Media Library</p>
+                <img src="/images/proof/n8n-wf-media-ingest.png" alt="Media library ingestion workflow" style={{ width: "100%", borderRadius: 10, border: `1px solid ${C.border}` }} loading="lazy" />
+              </div>
+            </div>
+          </div>
+
+          {/* Infrastructure */}
+          <div style={{ marginBottom: 40 }}>
+            <h3 style={{ fontSize: 16, fontWeight: 600, marginBottom: 16, color: C.gold }}>Infrastructure</h3>
+            <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: 16 }}>
+              <div>
+                <p style={{ fontSize: 11, color: C.muted, margin: "0 0 6px" }}>Cloudflare R2 — content-media bucket (25.58 GB)</p>
+                <img src="/images/proof/cloudflare-r2-overview.png" alt="Cloudflare R2 storage bucket" style={{ width: "100%", borderRadius: 10, border: `1px solid ${C.border}` }} loading="lazy" />
+              </div>
+              <div>
+                <p style={{ fontSize: 11, color: C.muted, margin: "0 0 6px" }}>R2 Storage Metrics — steady growth</p>
+                <img src="/images/proof/cloudflare-r2-metrics.png" alt="R2 storage metrics graph" style={{ width: "100%", borderRadius: 10, border: `1px solid ${C.border}` }} loading="lazy" />
+              </div>
+              <div>
+                <p style={{ fontSize: 11, color: C.muted, margin: "0 0 6px" }}>Hetzner — 2 production servers (EU)</p>
+                <img src="/images/proof/hetzner-dashboard.png" alt="Hetzner server dashboard" style={{ width: "100%", borderRadius: 10, border: `1px solid ${C.border}` }} loading="lazy" />
+              </div>
+            </div>
+          </div>
+
+          {/* Verify CTA */}
+          <div style={{ textAlign: "center", padding: "24px", background: `${C.teal}10`, borderRadius: 14, border: `1px solid ${C.teal}30` }}>
+            <p style={{ fontSize: 14, fontWeight: 600, margin: "0 0 8px" }}>Verify It Yourself</p>
+            <p style={{ fontSize: 12, color: C.muted, margin: "0 0 12px" }}>These endpoints are public — open them in your browser. Response times change on every refresh.</p>
+            <div style={{ display: "flex", gap: 12, justifyContent: "center", flexWrap: "wrap" }}>
+              <a href="https://leonelulloa.com/api/health" target="_blank" rel="noopener noreferrer" style={{ padding: "8px 16px", background: `${C.teal}20`, color: C.teal, borderRadius: 8, fontSize: 12, fontFamily: C.mono, textDecoration: "none", border: `1px solid ${C.teal}40` }}>/api/health</a>
+              <a href="https://leonelulloa.com/api/infrastructure" target="_blank" rel="noopener noreferrer" style={{ padding: "8px 16px", background: `${C.teal}20`, color: C.teal, borderRadius: 8, fontSize: 12, fontFamily: C.mono, textDecoration: "none", border: `1px solid ${C.teal}40` }}>/api/infrastructure</a>
+              <a href="https://leonelulloa.com/status" target="_blank" rel="noopener noreferrer" style={{ padding: "8px 16px", background: `${C.teal}20`, color: C.teal, borderRadius: 8, fontSize: 12, fontFamily: C.mono, textDecoration: "none", border: `1px solid ${C.teal}40` }}>/status</a>
+            </div>
+          </div>
+        </FadeIn>
+      </section>
+
+      {/* ══════════════════════════════════════════
           FOOTER / CTA
       ══════════════════════════════════════════ */}
       <footer style={{ padding: "48px 5%", borderTop: `1px solid ${C.border}`, textAlign: "center" }}>

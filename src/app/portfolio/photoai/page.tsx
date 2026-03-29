@@ -603,6 +603,51 @@ export default function PortfolioPage() {
         </div>
       </section>
 
+      {/* ═══ PROOF — SEE IT LIVE ═══ */}
+      <section style={{ padding: "60px 5%", borderTop: `1px solid ${C.border}` }}>
+        <div style={{ textAlign: "center", marginBottom: 40 }}>
+          <h2 style={{ fontSize: 28, fontWeight: 700, margin: "0 0 8px" }}>See It Live</h2>
+          <p style={{ fontSize: 14, color: C.muted, margin: 0 }}>Real recordings from the production app. Not mockups — this is photoaiadvantage.com running live.</p>
+        </div>
+
+        {/* Try It Live CTA */}
+        <div style={{ textAlign: "center", marginBottom: 40, padding: "24px 32px", background: `linear-gradient(135deg, ${C.accent}15, ${C.teal}10)`, borderRadius: 16, border: `1px solid ${C.accent}30` }}>
+          <p style={{ fontSize: 16, fontWeight: 600, margin: "0 0 8px" }}>The app is live and public</p>
+          <p style={{ fontSize: 13, color: C.muted, margin: "0 0 16px" }}>Create a free account and try the ad generation yourself. This is a real SaaS, not a demo.</p>
+          <a href="https://photoaiadvantage.com" target="_blank" rel="noopener noreferrer" style={{ display: "inline-block", padding: "12px 32px", background: C.accent, color: "white", borderRadius: 10, fontSize: 14, fontWeight: 600, textDecoration: "none" }}>
+            Try PhotoAI Advantage →
+          </a>
+        </div>
+
+        {/* Video Grid */}
+        <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 24, marginBottom: 32 }}>
+          <div>
+            <p style={{ fontSize: 13, fontWeight: 600, margin: "0 0 8px" }}>Admin Panel Walkthrough</p>
+            <p style={{ fontSize: 11, color: C.muted, margin: "0 0 12px" }}>2FA login, user management, promotions, financial dashboard, error monitoring, feature flags, audit trail, seasonal themes — navigating the full 70+ page admin panel.</p>
+            <video
+              controls
+              preload="metadata"
+              style={{ width: "100%", borderRadius: 12, border: `1px solid ${C.border}` }}
+              poster=""
+            >
+              <source src="https://pub-6d2cb2e1eb2747bbbdfe232e94a7fac5.r2.dev/portfolio/videos/photoai-admin-panel.mp4" type="video/mp4" />
+            </video>
+          </div>
+          <div>
+            <p style={{ fontSize: 13, fontWeight: 600, margin: "0 0 8px" }}>Ad Generation Demo</p>
+            <p style={{ fontSize: 11, color: C.muted, margin: "0 0 12px" }}>Complete flow: company form → product form → image upload → goal selection → AI generates 6 ad variants → open editor → edit text placement, colors, effects.</p>
+            <video
+              controls
+              preload="metadata"
+              style={{ width: "100%", borderRadius: 12, border: `1px solid ${C.border}` }}
+              poster=""
+            >
+              <source src="https://pub-6d2cb2e1eb2747bbbdfe232e94a7fac5.r2.dev/portfolio/videos/photoai-app-demo.mp4" type="video/mp4" />
+            </video>
+          </div>
+        </div>
+      </section>
+
       {/* ═══ BOTTOM NAV ═══ */}
       <footer style={{ padding: "40px 5% 32px", borderTop: `1px solid ${C.border}`, display: "flex", justifyContent: "space-between", alignItems: "center" }}>
         <a href="/portfolio" style={{ fontSize: 13, color: C.muted, textDecoration: "none" }}>← Back to Portfolio</a>
