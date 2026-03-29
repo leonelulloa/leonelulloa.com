@@ -5,6 +5,9 @@ export default function ResumeLayout({
 }) {
   return (
     <html lang="en">
+      <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+      </head>
       <body
         style={{
           margin: 0,
@@ -16,6 +19,12 @@ export default function ResumeLayout({
         }}
       >
         <style>{`
+          @media (max-width: 768px) {
+            .resume { padding: 20px 16px !important; }
+            [data-grid="resume-caps"] { grid-template-columns: 1fr !important; }
+            [data-grid="resume-certs"] { grid-template-columns: 1fr !important; }
+            h1 { font-size: 24px !important; }
+          }
           @media print {
             body { background: white !important; color: #111 !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
             .resume { box-shadow: none !important; border: none !important; max-width: 100% !important; padding: 20px !important; }

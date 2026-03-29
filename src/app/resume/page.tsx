@@ -150,6 +150,7 @@ export default function ResumePage() {
         {/* ═══ TECHNICAL SKILLS ═══ */}
         <Section title="Technical Skills">
           <div
+            data-grid="resume-caps"
             style={{
               display: "grid",
               gridTemplateColumns: "1fr 1fr",
@@ -189,6 +190,7 @@ export default function ResumePage() {
         {/* ═══ CERTIFICATIONS ═══ */}
         <Section title="Certifications">
           <div
+            data-grid="resume-certs"
             style={{
               display: "grid",
               gridTemplateColumns: "1fr 1fr",

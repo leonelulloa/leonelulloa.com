@@ -459,7 +459,7 @@ export default function PipelinePage() {
           {/* n8n Workflows */}
           <div style={{ marginBottom: 40 }}>
             <h3 style={{ fontSize: 16, fontWeight: 600, marginBottom: 16, color: C.teal }}>n8n Automation Platform</h3>
-            <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 16, marginBottom: 16 }}>
+            <div data-grid="proof-n8n" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 16, marginBottom: 16 }}>
               <div>
                 <p style={{ fontSize: 11, color: C.muted, margin: "0 0 6px" }}>27 workflows — 0% failure rate — 60.58s avg run time</p>
                 <img src="/images/proof/n8n-workflows-list.png" alt="n8n workflow list showing 27 active workflows" style={{ width: "100%", borderRadius: 10, border: `1px solid ${C.border}` }} loading="lazy" />
@@ -469,7 +469,7 @@ export default function PipelinePage() {
                 <img src="/images/proof/n8n-executions-log.png" alt="n8n execution log showing successful runs" style={{ width: "100%", borderRadius: 10, border: `1px solid ${C.border}` }} loading="lazy" />
               </div>
             </div>
-            <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: 16 }}>
+            <div data-grid="proof-n8n-detail" style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: 16 }}>
               <div>
                 <p style={{ fontSize: 11, color: C.muted, margin: "0 0 6px" }}>WF10 — Production Pipeline (12 nodes)</p>
                 <img src="/images/proof/n8n-wf10-production-pipeline.png" alt="WF10 Production Pipeline workflow" style={{ width: "100%", borderRadius: 10, border: `1px solid ${C.border}` }} loading="lazy" />
@@ -500,7 +500,7 @@ export default function PipelinePage() {
           {/* Infrastructure */}
           <div style={{ marginBottom: 40 }}>
             <h3 style={{ fontSize: 16, fontWeight: 600, marginBottom: 16, color: C.gold }}>Infrastructure</h3>
-            <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: 16 }}>
+            <div data-grid="proof-infra" style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: 16 }}>
               <div>
                 <p style={{ fontSize: 11, color: C.muted, margin: "0 0 6px" }}>Cloudflare R2 — content-media bucket (25.58 GB)</p>
                 <img src="/images/proof/cloudflare-r2-overview.png" alt="Cloudflare R2 storage bucket" style={{ width: "100%", borderRadius: 10, border: `1px solid ${C.border}` }} loading="lazy" />
@@ -520,7 +520,7 @@ export default function PipelinePage() {
           <div style={{ textAlign: "center", padding: "24px", background: `${C.teal}10`, borderRadius: 14, border: `1px solid ${C.teal}30` }}>
             <p style={{ fontSize: 14, fontWeight: 600, margin: "0 0 8px" }}>Verify It Yourself</p>
             <p style={{ fontSize: 12, color: C.muted, margin: "0 0 12px" }}>These endpoints are public — open them in your browser. Response times change on every refresh.</p>
-            <div style={{ display: "flex", gap: 12, justifyContent: "center", flexWrap: "wrap" }}>
+            <div data-flex="verify-links" style={{ display: "flex", gap: 12, justifyContent: "center", flexWrap: "wrap" }}>
               <a href="https://leonelulloa.com/api/health" target="_blank" rel="noopener noreferrer" style={{ padding: "8px 16px", background: `${C.teal}20`, color: C.teal, borderRadius: 8, fontSize: 12, fontFamily: C.mono, textDecoration: "none", border: `1px solid ${C.teal}40` }}>/api/health</a>
               <a href="https://leonelulloa.com/api/infrastructure" target="_blank" rel="noopener noreferrer" style={{ padding: "8px 16px", background: `${C.teal}20`, color: C.teal, borderRadius: 8, fontSize: 12, fontFamily: C.mono, textDecoration: "none", border: `1px solid ${C.teal}40` }}>/api/infrastructure</a>
               <a href="https://leonelulloa.com/status" target="_blank" rel="noopener noreferrer" style={{ padding: "8px 16px", background: `${C.teal}20`, color: C.teal, borderRadius: 8, fontSize: 12, fontFamily: C.mono, textDecoration: "none", border: `1px solid ${C.teal}40` }}>/status</a>
@@ -604,7 +604,7 @@ function PipelineLayer({
 
         <p style={{ fontSize: 14, color: C.muted, lineHeight: 1.7, margin: "0 0 16px", paddingLeft: 72 }}>{description}</p>
 
-        <div style={{ paddingLeft: 72, display: "grid", gridTemplateColumns: "1fr 1fr", gap: 16 }}>
+        <div data-grid="layer-content" style={{ paddingLeft: 72, display: "grid", gridTemplateColumns: "1fr 1fr", gap: 16 }}>
           {/* Workflows */}
           <div style={{ background: C.panel, border: `1px solid ${C.border}`, borderRadius: 14, padding: 16 }}>
             <p style={{ fontSize: 11, fontWeight: 600, color, textTransform: "uppercase", letterSpacing: "0.06em", margin: "0 0 10px" }}>Workflows</p>

@@ -54,7 +54,7 @@ export default function PortfolioHub() {
         {/* Top bar */}
         <FadeIn delay={50}>
           <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: 40, position: "relative", zIndex: 2 }}>
-            <div style={{ display: "flex", gap: 8 }}>
+            <div data-flex="hero-links" style={{ display: "flex", gap: 8 }}>
               {(["Resume", "LinkedIn", "GitHub", "Email"] as const).map((label) => {
                 const hrefs = { Resume: "/resume", LinkedIn: "https://linkedin.com/in/leonel-ulloa-ai", GitHub: "https://github.com/leonelulloa", Email: "mailto:leonel090810@gmail.com" };
                 return (
@@ -88,7 +88,7 @@ export default function PortfolioHub() {
           </FadeIn>
 
           <FadeIn delay={200}>
-            <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 40, marginBottom: 32 }}>
+            <div data-grid="hero-layout" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 40, marginBottom: 32 }}>
               {/* Left: My pitch */}
               <div>
                 <p style={{ fontSize: 16, color: C.text, lineHeight: 1.8, margin: "0 0 16px" }}>
@@ -112,7 +112,7 @@ export default function PortfolioHub() {
                 <p style={{ fontSize: 12, fontFamily: C.mono, color: C.dim, textTransform: "uppercase", letterSpacing: "0.15em", marginBottom: 14 }}>
                   what I built solo from zero
                 </p>
-                <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: 10, marginBottom: 16 }}>
+                <div data-grid="hero-stats" style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: 10, marginBottom: 16 }}>
                   {([
                     ["260+", "DB Tables", C.accent],
                     ["308+", "API Routes", C.teal],
@@ -130,7 +130,7 @@ export default function PortfolioHub() {
                     </div>
                   ))}
                 </div>
-                <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
+                <div data-grid="infra-boxes" style={{ display: "flex", flexDirection: "column", gap: 8 }}>
                   <div style={{
                     background: C.card, border: `1px solid ${C.border}`, borderRadius: 12,
                     padding: "10px 14px",
@@ -185,7 +185,7 @@ export default function PortfolioHub() {
             }}>
               <div style={{ height: 3, background: `linear-gradient(90deg, ${C.accent}, ${C.teal})`, backgroundSize: "200% 100%", animation: "gradient-shift 4s ease infinite" }} />
               <div style={{ padding: "28px 32px 24px" }}>
-                <div style={{ display: "flex", alignItems: "center", gap: 10, marginBottom: 16 }}>
+                <div data-flex="system-header" style={{ display: "flex", alignItems: "center", gap: 10, marginBottom: 16 }}>
                   <div style={{ width: 44, height: 44, borderRadius: 12, background: `${C.accent}15`, border: `1px solid ${C.accent}30`, display: "flex", alignItems: "center", justifyContent: "center", fontSize: 22 }}>📱</div>
                   <div style={{ flex: 1 }}>
                     <h3 style={{ fontSize: 20, fontWeight: 700, margin: 0 }}>PhotoAI Advantage 2.0</h3>
@@ -202,7 +202,7 @@ export default function PortfolioHub() {
                   The admin panel was <strong style={{ color: C.muted }}>built before the app</strong> — 70+ pages, 12-layer security, promotion engine with approval workflows, seasonal themes per country, A/B testing, error monitoring, and financial dashboards. One person can operate the entire multi-market platform without engineering tickets.
                 </p>
 
-                <div style={{ display: "flex", gap: 16, marginBottom: 16 }}>
+                <div data-grid="system-stats" style={{ display: "flex", gap: 16, marginBottom: 16 }}>
                   {([["215", "tables"], ["193", "routes"], ["70+", "admin pages"], ["420+", "RLS"], ["5", "langs"]] as const).map(([v, l]) => (
                     <div key={l} style={{ textAlign: "center" }}>
                       <p style={{ fontSize: 18, fontWeight: 800, fontFamily: C.mono, margin: 0, color: C.accent }}>{v}</p>
@@ -211,7 +211,7 @@ export default function PortfolioHub() {
                   ))}
                 </div>
 
-                <div style={{ display: "flex", flexWrap: "wrap", gap: 5, marginBottom: 16 }}>
+                <div data-flex="feature-tags" style={{ display: "flex", flexWrap: "wrap", gap: 5, marginBottom: 16 }}>
                   {["Admin Panel", "12-Layer Security", "AI Ad Generation", "Spatial Intelligence", "Neuromarketing", "Multi-Provider AI", "Fabric.js Editor", "Stripe + Credits"].map(t => (
                     <span key={t} style={{ fontSize: 10, fontFamily: C.mono, background: `${C.accent}08`, border: `1px solid ${C.accent}15`, color: "#b0b8cc", padding: "3px 8px", borderRadius: 6 }}>{t}</span>
                   ))}
@@ -232,7 +232,7 @@ export default function PortfolioHub() {
             }}>
               <div style={{ height: 3, background: `linear-gradient(90deg, ${C.teal}, ${C.green})`, backgroundSize: "200% 100%", animation: "gradient-shift 4s ease infinite" }} />
               <div style={{ padding: "28px 32px 24px" }}>
-                <div style={{ display: "flex", alignItems: "center", gap: 10, marginBottom: 16 }}>
+                <div data-flex="system-header" style={{ display: "flex", alignItems: "center", gap: 10, marginBottom: 16 }}>
                   <div style={{ width: 44, height: 44, borderRadius: 12, background: `${C.teal}15`, border: `1px solid ${C.teal}30`, display: "flex", alignItems: "center", justifyContent: "center", fontSize: 22 }}>🔄</div>
                   <div style={{ flex: 1 }}>
                     <h3 style={{ fontSize: 20, fontWeight: 700, margin: 0 }}>L7AI Content Intelligence</h3>
@@ -249,7 +249,7 @@ export default function PortfolioHub() {
                   The system publishes across <strong style={{ color: C.muted }}>10 social channels in English and Spanish</strong> — Instagram, LinkedIn, Facebook, Threads, YouTube. It includes a custom Remotion video renderer with a 7-stage audio mastering pipeline that brought levels from -58 LUFS (inaudible) to broadcast standard. Scripts require my approval; after that, everything is automated end-to-end.
                 </p>
 
-                <div style={{ display: "flex", gap: 16, marginBottom: 16 }}>
+                <div data-grid="system-stats" style={{ display: "flex", gap: 16, marginBottom: 16 }}>
                   {([["26", "workflows"], ["47", "tables"], ["14.9K+", "records"], ["10", "channels"], ["$43", "infra/mo"]] as const).map(([v, l]) => (
                     <div key={l} style={{ textAlign: "center" }}>
                       <p style={{ fontSize: 18, fontWeight: 800, fontFamily: C.mono, margin: 0, color: C.teal }}>{v}</p>
@@ -258,7 +258,7 @@ export default function PortfolioHub() {
                   ))}
                 </div>
 
-                <div style={{ display: "flex", flexWrap: "wrap", gap: 5, marginBottom: 16 }}>
+                <div data-flex="feature-tags" style={{ display: "flex", flexWrap: "wrap", gap: 5, marginBottom: 16 }}>
                   {["5-Layer Pipeline", "Topic Scoring AI", "Remotion Video", "7-Stage Audio", "AI Characters", "n8n", "Self-Hosted", "Postiz Publishing"].map(t => (
                     <span key={t} style={{ fontSize: 10, fontFamily: C.mono, background: `${C.teal}08`, border: `1px solid ${C.teal}15`, color: "#b0b8cc", padding: "3px 8px", borderRadius: 6 }}>{t}</span>
                   ))}
@@ -294,7 +294,7 @@ export default function PortfolioHub() {
           </p>
         </FadeIn>
 
-        <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: 20 }}>
+        <div data-grid="three-angles" style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: 20 }}>
           {([
             ["⚙️", "Development", C.teal, "Build it now or pay 10× later. The seasonal theme system was built before launch because retrofitting CSS across 70+ pages later costs weeks. Error monitoring is custom-built ($0/mo) because it integrates with our deploy pipeline — Sentry can't do that and costs $26/mo at scale."],
             ["📊", "Business", C.gold, "Revenue, cost, governance. Separating text from AI images creates translation as an upsell, multi-format at zero cost, and 6 variants from 2 generations. The admin panel's promotion engine has approval workflows so no one can accidentally give 90% off to everyone."],
@@ -326,7 +326,7 @@ export default function PortfolioHub() {
           <p style={{ fontSize: 14, color: C.muted, margin: "0 0 24px" }}>
             Live demos, architecture walkthroughs, and system deep-dives available.
           </p>
-          <div style={{ display: "flex", justifyContent: "center", gap: 12 }}>
+          <div data-flex="footer-links" style={{ display: "flex", justifyContent: "center", gap: 12 }}>
             {([
               ["✉️ Email Me", "mailto:leonel090810@gmail.com", C.accent],
               ["📄 Resume", "/resume", C.teal],

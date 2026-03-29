@@ -56,12 +56,12 @@ export default function PortfolioPage() {
          ══════════════════════════════════════════════════════════ */}
       <section style={{ padding: "60px 0" }}>
         {/* Section header — full width bar */}
-        <div style={{ background: `linear-gradient(90deg, ${C.accent}15, transparent)`, borderTop: `1px solid ${C.accent}30`, borderBottom: `1px solid ${C.accent}30`, padding: "20px 5%", marginBottom: 48, display: "flex", justifyContent: "space-between", alignItems: "center" }}>
+        <div data-flex="section-banner" style={{ background: `linear-gradient(90deg, ${C.accent}15, transparent)`, borderTop: `1px solid ${C.accent}30`, borderBottom: `1px solid ${C.accent}30`, padding: "20px 5%", marginBottom: 48, display: "flex", justifyContent: "space-between", alignItems: "center" }}>
           <div>
             <h2 style={{ fontSize: 28, fontWeight: 700, margin: 0 }}>📱 PhotoAI Advantage 2.0</h2>
             <p style={{ fontSize: 14, color: C.muted, margin: "4px 0 0" }}>AI-Powered Ad Creation SaaS · Pre-launch</p>
           </div>
-          <div style={{ display: "flex", gap: 16, flexWrap: "wrap" }}>
+          <div data-flex="banner-stats" style={{ display: "flex", gap: 16, flexWrap: "wrap" }}>
             {([["15,915", "files"], ["194", "routes"], ["114", "pages"], ["5", "languages"]] as const).map(([v, l]) => (
               <div key={l} style={{ textAlign: "right" }}>
                 <span style={{ fontSize: 20, fontWeight: 700, fontFamily: C.mono, color: C.accent }}>{v}</span>
@@ -184,7 +184,7 @@ export default function PortfolioPage() {
             </div>
 
             {/* ── COMPACT: remaining 6 modules ── */}
-            <div style={{
+            <div data-grid="admin-cards" style={{
               display: "grid",
               gridTemplateColumns: "repeat(3, 1fr)",
               gap: 10,
@@ -230,7 +230,7 @@ export default function PortfolioPage() {
             </p>
 
             {/* Two-column comparison */}
-            <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 16, marginBottom: 24 }}>
+            <div data-grid="security-layers" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 16, marginBottom: 24 }}>
               <div className="hover-lift" style={{ background: C.card, border: `1px solid ${C.border}`, borderRadius: 16, padding: 20, borderTop: `3px solid ${C.teal}` }}>
                 <div style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: 12 }}>
                   <span style={{ fontSize: 20 }}>👤</span>
@@ -288,7 +288,7 @@ export default function PortfolioPage() {
               </p>
             </div>
 
-            <div style={{ background: C.deep, border: `1px solid ${C.border}`, borderRadius: 14, padding: 20, fontFamily: C.mono, fontSize: 12, lineHeight: 2.2 }}>
+            <div data-el="security-flow" style={{ background: C.deep, border: `1px solid ${C.border}`, borderRadius: 14, padding: 20, fontFamily: C.mono, fontSize: 12, lineHeight: 2.2 }}>
               <p style={{ fontWeight: 700, margin: "0 0 4px", fontSize: 13, fontFamily: C.sans }}>Admin Request Flow — /admin/* (every single request)</p>
               <span style={{ color: C.blue }}>Edge</span> → cookie? <Tag c={C.red}>✗ redirect</Tag> →
               <span style={{ color: C.accent }}> Auth</span> → admin_users table? <Tag c={C.red}>✗ rejected</Tag> →
@@ -317,7 +317,7 @@ export default function PortfolioPage() {
             </p>
 
             {/* Wizard steps — compact visual */}
-            <div style={{ display: "flex", gap: 8, marginBottom: 24, flexWrap: "wrap" }}>
+            <div data-grid="wizard-steps" style={{ display: "flex", gap: 8, marginBottom: 24, flexWrap: "wrap" }}>
               {([
                 ["1", "🏢", "Company", "Brand name, colors, fonts, industry", C.accent],
                 ["2", "📦", "Product", "Name, price, benefit, audience, description", C.blue],
@@ -354,9 +354,9 @@ export default function PortfolioPage() {
             {/* Visual pipeline — connected nodes (INTERACTIVE) */}
             <div style={{ position: "relative", padding: "20px 0" }}>
               {/* Animated connecting line */}
-              <div className="pipeline-line" style={{ position: "absolute", top: 56, left: 28, right: 28, height: 3, borderRadius: 2, zIndex: 0 }} />
+              <div data-el="pipeline-line" className="pipeline-line" style={{ position: "absolute", top: 56, left: 28, right: 28, height: 3, borderRadius: 2, zIndex: 0 }} />
 
-              <div style={{ display: "flex", justifyContent: "space-between", position: "relative", zIndex: 1, gap: 8 }}>
+              <div data-flex="pipeline-nodes" style={{ display: "flex", justifyContent: "space-between", position: "relative", zIndex: 1, gap: 8 }}>
                 <PulseNode icon="📸" label="Upload" sub="Product photo" color={C.muted} />
                 <PulseNode icon="🧠" label="AI Director" sub="Creative plan" color={C.accent} active />
                 <PulseNode icon="🎭" label="2 Scenes" sub="Parallel gen" color={C.blue} />
@@ -369,7 +369,7 @@ export default function PortfolioPage() {
             </div>
 
             {/* Pipeline detail cards — 2 col, varied */}
-            <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 12, marginTop: 24 }}>
+            <div data-grid="pipeline-details" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 12, marginTop: 24 }}>
               <PipeCard icon="🧠" title="AI Creative Director" badge="$0.008" color={C.accent}>
                 Vision-capable LLM analyzes the product image, generates a complete creative brief, plans 2 scene compositions, and writes 6 ad copy variants — each with a unique persuasion angle (urgency, social proof, emotional, features, value, use-case). One call, complete plan.
               </PipeCard>
@@ -385,13 +385,13 @@ export default function PortfolioPage() {
             </div>
 
             {/* The key comparison — WIDE */}
-            <div style={{ display: "grid", gridTemplateColumns: "1fr 80px 1fr", gap: 0, alignItems: "stretch", margin: "24px 0", borderRadius: 20, overflow: "hidden", border: `1px solid ${C.border}` }}>
+            <div data-grid="comparison" style={{ display: "grid", gridTemplateColumns: "1fr 80px 1fr", gap: 0, alignItems: "stretch", margin: "24px 0", borderRadius: 20, overflow: "hidden", border: `1px solid ${C.border}` }}>
               <div style={{ background: "rgba(255,255,255,0.02)", padding: 32, textAlign: "center", display: "flex", flexDirection: "column", justifyContent: "center" }}>
                 <p style={{ fontSize: 11, fontFamily: C.mono, color: C.dim, textTransform: "uppercase", letterSpacing: "0.15em", margin: "0 0 12px" }}>industry standard</p>
                 <p style={{ fontSize: 56, fontWeight: 800, fontFamily: C.mono, margin: "0 0 12px", color: C.dim, lineHeight: 1 }}>1:1</p>
                 <p style={{ fontSize: 14, color: C.muted, margin: 0 }}>1 AI generation = 1 ad<br />New size? Pay again. New language? Pay again.</p>
               </div>
-              <div style={{ background: `linear-gradient(180deg, ${C.accent}30, ${C.teal}30)`, display: "flex", alignItems: "center", justifyContent: "center" }}>
+              <div data-el="comparison-arrow" style={{ background: `linear-gradient(180deg, ${C.accent}30, ${C.teal}30)`, display: "flex", alignItems: "center", justifyContent: "center" }}>
                 <span style={{ fontSize: 32, color: C.accent }}>→</span>
               </div>
               <div style={{ background: C.accentGlow, padding: 32, textAlign: "center", display: "flex", flexDirection: "column", justifyContent: "center", boxShadow: `inset 0 0 60px ${C.accentGlow}` }}>
@@ -417,7 +417,7 @@ export default function PortfolioPage() {
             </div>
 
             {/* Stats banner */}
-            <div style={{ display: "flex", gap: 24, marginBottom: 20, flexWrap: "wrap" }}>
+            <div data-grid="db-stats" style={{ display: "flex", gap: 24, marginBottom: 20, flexWrap: "wrap" }}>
               {([["215", "Tables", C.accent], ["139", "RPC Functions", C.teal], ["107", "Triggers", C.blue], ["43", "Enums", C.green], ["420+", "RLS Policies", C.gold]] as const).map(([v, l, c]) => (
                 <div key={l} style={{ display: "flex", alignItems: "baseline", gap: 8 }}>
                   <span style={{ fontSize: 28, fontWeight: 800, fontFamily: C.mono, color: c }}>{v}</span>
@@ -427,7 +427,7 @@ export default function PortfolioPage() {
             </div>
 
             {/* DB layers — horizontal layout */}
-            <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 12 }}>
+            <div data-grid="db-schema" style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 12 }}>
               {([
                 ["👤", "User Data", "Users, companies, products, services. Multi-company support. AI-generated metadata.", C.blue],
                 ["🤖", "AI Generation", "Image jobs, orchestrator state, director output, scene compositions, cost tracking per generation.", C.accent],
@@ -454,7 +454,7 @@ export default function PortfolioPage() {
               </div>
             </div>
 
-            <div style={{ display: "flex", flexDirection: "column", gap: 12, marginBottom: 24 }}>
+            <div data-grid="tech-decisions" style={{ display: "flex", flexDirection: "column", gap: 12, marginBottom: 24 }}>
               {([
                 ["Why Supabase?", "PostgreSQL relational integrity for 215 tables with FK, joins, transactions. RLS (420+ policies) = security at the DB, not just the app. 139 RPCs as stored procedures. Built-in auth. MongoDB lacks RLS and relational joins. Firebase locks you into Google.", "$0 dev · $25/mo prod", C.accent],
                 ["Why Cloudflare R2?", "Zero egress fees. S3 charges $0.09/GB transfer. At 10K users: S3 = $12,150/mo in egress. R2 = ~$4.50/mo. At 1M users: S3 egress = ~$1.2M/year. R2 = $0. This single decision saves 6 figures annually at scale.", "$0 egress forever", C.teal],
@@ -477,7 +477,7 @@ export default function PortfolioPage() {
             </div>
 
             {/* Cost comparison table — ALL providers */}
-            <div style={{ borderRadius: 14, overflow: "hidden", border: `1px solid ${C.border}`, marginBottom: 20 }}>
+            <div data-el="cost-table" style={{ borderRadius: 14, overflow: "hidden", border: `1px solid ${C.border}`, marginBottom: 20 }}>
               <div style={{ background: C.deep, padding: "14px 20px" }}>
                 <p style={{ fontSize: 15, fontWeight: 600, margin: 0 }}>📊 Monthly Infrastructure Cost — Our Stack vs AWS vs Azure vs Google Cloud</p>
                 <p style={{ fontSize: 11, color: C.dim, margin: "4px 0 0" }}>We evaluated all three major cloud providers. Estimates based on equivalent services at each scale tier.</p>
@@ -620,7 +620,7 @@ export default function PortfolioPage() {
         </div>
 
         {/* Video Grid */}
-        <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 24, marginBottom: 32 }}>
+        <div data-grid="video-grid" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 24, marginBottom: 32 }}>
           <div>
             <p style={{ fontSize: 13, fontWeight: 600, margin: "0 0 8px" }}>Admin Panel Walkthrough</p>
             <p style={{ fontSize: 11, color: C.muted, margin: "0 0 12px" }}>2FA login, user management, promotions, financial dashboard, error monitoring, feature flags, audit trail, seasonal themes — navigating the full 70+ page admin panel.</p>
