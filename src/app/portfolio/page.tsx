@@ -82,8 +82,14 @@ export default function PortfolioHub() {
             }}>
               <span className="shimmer-text">Leonel Ulloa</span>
             </h1>
-            <p style={{ fontSize: 18, color: C.accent, fontWeight: 500, margin: "0 0 24px" }}>
+            <p style={{ fontSize: 18, color: C.accent, fontWeight: 500, margin: "0 0 8px" }}>
               Product Engineer · AI Systems &amp; Automation
+            </p>
+            <p style={{ fontSize: 13, fontFamily: C.mono, color: C.muted, margin: "0 0 6px" }}>
+              Open to: Full Stack Engineer · Product Engineer · AI/Automation Engineer · Founding Engineer · Solutions Engineer
+            </p>
+            <p style={{ fontSize: 12, fontFamily: C.mono, color: C.dim, margin: "0 0 24px" }}>
+              Based in UK · Remote / Hybrid · English &amp; Spanish
             </p>
           </FadeIn>
 
@@ -109,6 +115,9 @@ export default function PortfolioHub() {
 
               {/* Right: What I built — summary numbers */}
               <div>
+                <p style={{ fontSize: 13, color: C.muted, lineHeight: 1.6, margin: "0 0 14px", borderLeft: `2px solid ${C.accent}`, paddingLeft: 12 }}>
+                  I build production systems end-to-end: database design, APIs, security, automation pipelines, admin tooling, and deployment.
+                </p>
                 <p style={{ fontSize: 12, fontFamily: C.mono, color: C.dim, textTransform: "uppercase", letterSpacing: "0.15em", marginBottom: 14 }}>
                   what I built solo from zero
                 </p>
@@ -191,7 +200,10 @@ export default function PortfolioHub() {
                     <h3 style={{ fontSize: 20, fontWeight: 700, margin: 0 }}>PhotoAI Advantage 2.0</h3>
                     <p style={{ fontSize: 12, fontFamily: C.mono, color: C.accent, margin: 0 }}>AI-Powered Ad Creation SaaS</p>
                   </div>
-                  <span style={{ fontSize: 10, fontFamily: C.mono, background: `${C.gold}20`, color: C.gold, padding: "3px 10px", borderRadius: 20 }}>pre-launch</span>
+                  <div style={{ display: "flex", flexDirection: "column", alignItems: "flex-end", gap: 4 }}>
+                    <span style={{ fontSize: 10, fontFamily: C.mono, background: `${C.gold}20`, color: C.gold, padding: "3px 10px", borderRadius: 20 }}>pre-launch</span>
+                    <span style={{ fontSize: 10, fontFamily: C.mono, color: C.dim }}>2025–Present · Solo build</span>
+                  </div>
                 </div>
 
                 <p style={{ fontSize: 14, color: C.muted, lineHeight: 1.7, margin: "0 0 16px" }}>
@@ -236,9 +248,12 @@ export default function PortfolioHub() {
                   <div style={{ width: 44, height: 44, borderRadius: 12, background: `${C.teal}15`, border: `1px solid ${C.teal}30`, display: "flex", alignItems: "center", justifyContent: "center", fontSize: 22 }}>🔄</div>
                   <div style={{ flex: 1 }}>
                     <h3 style={{ fontSize: 20, fontWeight: 700, margin: 0 }}>L7AI Content Intelligence</h3>
-                    <p style={{ fontSize: 12, fontFamily: C.mono, color: C.teal, margin: 0 }}>Automated Bilingual Content Pipeline</p>
+                    <p style={{ fontSize: 12, fontFamily: C.mono, color: C.teal, margin: 0 }}>Production Automation &amp; Orchestration System</p>
                   </div>
-                  <span style={{ fontSize: 10, fontFamily: C.mono, background: `${C.green}20`, color: C.green, padding: "3px 10px", borderRadius: 20, animation: "pulse-glow 3s ease infinite" }}>live · running daily</span>
+                  <div style={{ display: "flex", flexDirection: "column", alignItems: "flex-end", gap: 4 }}>
+                    <span style={{ fontSize: 10, fontFamily: C.mono, background: `${C.green}20`, color: C.green, padding: "3px 10px", borderRadius: 20, animation: "pulse-glow 3s ease infinite" }}>live · running daily</span>
+                    <span style={{ fontSize: 10, fontFamily: C.mono, color: C.dim }}>2025–Present · Solo build</span>
+                  </div>
                 </div>
 
                 <p style={{ fontSize: 14, color: C.muted, lineHeight: 1.7, margin: "0 0 16px" }}>
@@ -321,10 +336,10 @@ export default function PortfolioHub() {
       <footer style={{ padding: "60px 5% 48px", textAlign: "center" }}>
         <FadeIn>
           <h2 style={{ fontSize: "clamp(22px, 3vw, 32px)", fontWeight: 700, margin: "0 0 10px" }}>
-            See something <span style={{ color: C.accent }}>interesting?</span>
+            Interview-ready <span style={{ color: C.accent }}>materials available.</span>
           </h2>
           <p style={{ fontSize: 14, color: C.muted, margin: "0 0 24px" }}>
-            Live demos, architecture walkthroughs, and system deep-dives available.
+            Live system walkthrough, architecture review, private code access on request, and references.
           </p>
           <div data-flex="footer-links" style={{ display: "flex", justifyContent: "center", gap: 12 }}>
             {([
@@ -344,7 +359,7 @@ export default function PortfolioHub() {
             ))}
           </div>
           <p style={{ fontSize: 11, fontFamily: C.mono, color: C.dim, marginTop: 32 }}>
-            leonelulloa.com · Runcorn, UK
+            leonelulloa.com · Runcorn, UK · Remote / Hybrid · English &amp; Spanish
           </p>
         </FadeIn>
       </footer>
