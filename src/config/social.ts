@@ -17,7 +17,7 @@ export interface SocialLink {
 export const SOCIAL_LINKS: Record<string, Partial<Record<SocialPlatform, string>>> = {
   en: {
     youtube: "https://www.youtube.com/@LeonelUlloaAIMarketing",
-    linkedin: "https://www.linkedin.com/in/leonel-ulloa-1b85123b0/",
+    linkedin: "https://www.linkedin.com/in/leonel-ulloa-ai",
   },
   es: {
     youtube: "https://www.youtube.com/@LeonelUlloaES",
