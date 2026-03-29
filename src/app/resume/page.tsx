@@ -76,6 +76,7 @@ export default function ResumePage() {
             <span>leonel090810@gmail.com</span>
             <span>leonelulloa.com</span>
             <span>github.com/leonelulloa</span>
+            <span>github.com/L715Studio</span>
             <span>linkedin.com/in/leonel-ulloa-ai</span>
           </div>
         </header>
@@ -84,7 +85,7 @@ export default function ResumePage() {
 
         {/* ═══ SUMMARY ═══ */}
         <Section title="Summary">
-          <p style={{ fontSize: 13.5, lineHeight: 1.7, margin: 0 }}>
+          <p style={{ fontSize: 13.5, lineHeight: 1.7, margin: "0 0 10px" }}>
             Product and systems builder with hands-on experience designing and
             shipping complex software across SaaS, automation, content
             pipelines, and internal control systems. Strong in TypeScript,
@@ -95,6 +96,16 @@ export default function ResumePage() {
             no-code prototypes. I work best on cross-functional problems where
             product, operations, growth, and technical execution all matter at
             once.
+          </p>
+          <p style={{ fontSize: 13.5, lineHeight: 1.7, margin: 0 }}>
+            I am a problem solver by nature — when I encounter a challenge, I
+            study it until I find a solution that is not just functional but
+            improves security, reduces cost, and opens new business
+            opportunities. I think in complete solutions: not the fastest fix,
+            but the one that prevents future problems and creates long-term
+            value. I am in constant learning across technology, marketing, and
+            business — because the best architecture decisions come from
+            understanding all three simultaneously.
           </p>
         </Section>
 
