@@ -38,6 +38,7 @@ export default function Header({ lang }: { lang: string }) {
         <Link href={`/${lang}#social`}>{c.nContent}</Link>
         <Link href={`/${lang}#ebooks`}>{c.nEbooks}</Link>
         <Link href={`/${lang}#work`}>{c.nWork}</Link>
+        <Link href="/portfolio">Portfolio</Link>
         <Link href={`/${lang}#newsletter`}>{c.nNews}</Link>
         <button className="lang-btn" onClick={switchLang}>
           {otherLang.toUpperCase()}
