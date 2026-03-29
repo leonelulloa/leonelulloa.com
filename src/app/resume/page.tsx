@@ -78,6 +78,12 @@ export default function ResumePage() {
             <span>github.com/leonelulloa</span>
             <span>linkedin.com/in/leonel-ulloa-ai</span>
           </div>
+          <p style={{ fontSize: 11.5, color: "#8899b4", margin: "8px 0 0" }}>
+            Open to: Full Stack Engineer · Product Engineer · AI/Automation Engineer · Founding Engineer · Solutions Engineer
+          </p>
+          <p style={{ fontSize: 11, color: "#5a6a82", margin: "4px 0 0" }}>
+            Based in UK · Remote / Hybrid · English &amp; Spanish
+          </p>
         </header>
 
         <Divider />
@@ -241,10 +247,10 @@ export default function ResumePage() {
           }}
         >
           <p style={{ margin: "0 0 4px" }}>
-            Portfolio with live proof: leonelulloa.com/portfolio
+            Full portfolio with architecture deep-dives: leonelulloa.com/portfolio
           </p>
           <p style={{ margin: 0 }}>
-            Live demos, system walkthroughs, private repository access, and references available on request.
+            Interview-ready: live system walkthrough, architecture review, private code access, and references on request.
           </p>
         </footer>
       </div>
