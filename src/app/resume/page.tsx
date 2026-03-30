@@ -122,6 +122,7 @@ export default function ResumePage() {
           <ExperienceCard
             role="Founder / Product Engineer"
             project="PhotoAI Advantage 2.0"
+            period="2025 – Present"
             description="AI-powered ad creation SaaS (pre-launch)"
             bullets={[
               "Built a multi-language SaaS for AI-assisted ad creation using Next.js, React, TypeScript, Supabase, Stripe, Cloudflare R2, Redis, and Inngest",
@@ -135,9 +136,10 @@ export default function ResumePage() {
 
           {/* L7AI Pipeline */}
           <ExperienceCard
-            role="Founder / Systems Builder"
-            project="L7AI Content Intelligence Pipeline"
-            description="Automated bilingual content system (live)"
+            role="Founder / Automation Engineer"
+            project="L7AI Content Intelligence"
+            period="2025 – Present"
+            description="Production automation & orchestration system (live, running daily)"
             bullets={[
               "Built an automated research-to-publishing pipeline that scans 60 topics across multiple sources, scores opportunities, generates content, and publishes across 10 social channels in English and Spanish",
               "Designed a system with 26 active n8n workflows, 47 database tables, and 14,900+ records",
@@ -152,6 +154,7 @@ export default function ResumePage() {
           <ExperienceCard
             role="Founder / Full-Stack Builder"
             project="leonelulloa.com"
+            period="2025 – Present"
             description="Bilingual personal brand website (live)"
             bullets={[
               "Built and deployed a bilingual personal website with 72 AI prompts, 3 ebooks, email-gated downloads, newsletter capture, and analytics",
@@ -198,6 +201,25 @@ export default function ResumePage() {
               label="Business & Growth"
               text="Digital marketing strategy, content strategy, multilingual systems, automation for growth operations, cost/margin analysis"
             />
+          </div>
+        </Section>
+
+        <Divider />
+
+        {/* ═══ EDUCATION ═══ */}
+        <Section title="Education">
+          <div style={{ display: "flex", justifyContent: "space-between", alignItems: "baseline" }}>
+            <div>
+              <h3 style={{ fontSize: 14, fontWeight: 600, margin: 0 }}>
+                Systems Engineering Technician
+              </h3>
+              <p className="muted-text" style={{ fontSize: 12.5, color: "#a9b7cf", margin: "2px 0 0" }}>
+                University Gerardo Barrios — Computer Engineering
+              </p>
+            </div>
+            <span className="muted-text" style={{ fontSize: 12, color: "#a9b7cf", whiteSpace: "nowrap" }}>
+              2009 – 2012
+            </span>
           </div>
         </Section>
 
@@ -303,32 +325,41 @@ function Divider() {
 function ExperienceCard({
   role,
   project,
+  period,
   description,
   bullets,
   tech,
 }: {
   role: string;
   project: string;
+  period?: string;
   description: string;
   bullets: string[];
   tech: string;
 }) {
   return (
     <div style={{ marginBottom: 24 }}>
-      {/* Role line */}
-      <p
-        className="muted-text"
-        style={{
-          fontSize: 12,
-          color: "#a9b7cf",
-          margin: "0 0 2px",
-          fontWeight: 500,
-          textTransform: "uppercase",
-          letterSpacing: "0.04em",
-        }}
-      >
-        {role}
-      </p>
+      {/* Role + period line */}
+      <div style={{ display: "flex", justifyContent: "space-between", alignItems: "baseline" }}>
+        <p
+          className="muted-text"
+          style={{
+            fontSize: 12,
+            color: "#a9b7cf",
+            margin: "0 0 2px",
+            fontWeight: 500,
+            textTransform: "uppercase",
+            letterSpacing: "0.04em",
+          }}
+        >
+          {role}
+        </p>
+        {period && (
+          <span className="muted-text" style={{ fontSize: 12, color: "#a9b7cf", whiteSpace: "nowrap" }}>
+            {period}
+          </span>
+        )}
+      </div>
       {/* Project name + description */}
       <h3 style={{ fontSize: 15, fontWeight: 600, margin: "0 0 2px" }}>
         {project}
