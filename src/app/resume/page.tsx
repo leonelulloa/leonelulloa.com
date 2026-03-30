@@ -92,15 +92,15 @@ export default function ResumePage() {
         <Section title="Summary">
           <p style={{ fontSize: 13.5, lineHeight: 1.7, margin: "0 0 10px" }}>
             Product and systems builder with hands-on experience designing and
-            shipping complex software across SaaS, automation, content
-            pipelines, and internal control systems. Strong in TypeScript,
-            Next.js, React, Supabase/PostgreSQL, workflow automation, AI
-            integrations, and cost-aware product architecture. I use AI tools
-            (Claude Code, ChatGPT) within professional development workflows
-            (VS Code, Git, CI/CD) to build production-grade systems — not
-            no-code prototypes. I work best on cross-functional problems where
-            product, operations, growth, and technical execution all matter at
-            once.
+            shipping complex software across SaaS, automation, business
+            workflows, and internal control systems. Strong in TypeScript,
+            Next.js, React, Supabase/PostgreSQL, workflow automation, large
+            language model (LLM) integration, API development, and cost-aware
+            product architecture. I use AI tools (Claude Code, ChatGPT) within
+            professional development workflows (VS Code, Git, CI/CD) to build
+            production-grade, reliable systems — not no-code prototypes. I
+            work best on cross-functional problems where product, operations,
+            growth, and technical execution all matter at once.
           </p>
           <p style={{ fontSize: 13.5, lineHeight: 1.7, margin: 0 }}>
             I am a problem solver by nature — when I encounter a challenge, I
@@ -129,7 +129,7 @@ export default function ResumePage() {
               "Designed and implemented a large product architecture with 215 PostgreSQL tables, 193 API routes, 139 RPC functions, 107 triggers, and 420+ RLS policies",
               "Built a 70+ page admin control platform with RBAC, TOTP 2FA, CSRF protection, audit trails, feature flags, promotions, and operational controls",
               "Reduced generation cost by separating text rendering from AI image generation, enabling multiple ad variants, resizing, and translation with minimal incremental cost",
-              "Implemented multi-provider AI orchestration across Gemini, OpenAI, and DeepSeek with fallback logic, concurrency limits, and cost guardrails",
+              "Implemented multi-provider language model orchestration across Gemini, OpenAI, and DeepSeek with fallback logic, reliability safeguards, concurrency limits, and cost guardrails",
             ]}
             tech="Next.js 16, React 19, TypeScript, Supabase, PostgreSQL, Stripe, Cloudflare R2, Upstash Redis, Inngest, Fabric.js, Satori, Puppeteer, Tailwind CSS"
           />
@@ -141,11 +141,11 @@ export default function ResumePage() {
             period="2025 – Present"
             description="Production automation & orchestration system (live, running daily)"
             bullets={[
-              "Built an automated research-to-publishing pipeline that scans 60 topics across multiple sources, scores opportunities, generates content, and publishes across 10 social channels in English and Spanish",
+              "Analysed business workflows and built an automated research-to-publishing pipeline that scans 60 topics across multiple sources, scores opportunities, generates content, and publishes across 10 social channels in English and Spanish",
               "Designed a system with 26 active n8n workflows, 47 database tables, and 14,900+ records",
               "Automated content production across scripting, voice, music, captions, rendering, and publishing using n8n, Remotion, Supabase, R2, Postiz, and AI providers",
               "Built a 7-stage audio mastering pipeline and reusable media workflow that reduces production cost and turnaround time over time",
-              "Ran the system on self-hosted infrastructure using Hetzner, Docker, Coolify, and Traefik at approximately $43/month",
+              "Deployed and maintained reliable self-hosted infrastructure using Hetzner, Docker, Coolify, and Traefik at approximately $43/month with high uptime and automated recovery",
             ]}
             tech="n8n, Remotion, Supabase, Cloudflare R2, Docker, Traefik, Postiz, OpenAI, Claude API, Stability AI, FLUX, Kling"
           />
@@ -179,11 +179,11 @@ export default function ResumePage() {
           >
             <SkillGroup
               label="Product & Systems"
-              text="Product architecture, admin platforms, internal tools, feature flags, workflow design, cost-aware system design"
+              text="Product architecture, business workflow analysis, admin platforms, internal tools, feature flags, structured workflow design, system reliability, cost-aware system design"
             />
             <SkillGroup
               label="Full-Stack"
-              text="TypeScript, Next.js, React, Tailwind CSS, REST APIs, Fabric.js, Satori, Puppeteer"
+              text="TypeScript, JavaScript, Python (scripting), Next.js, React, Node.js, Tailwind CSS, REST APIs, API integrations, Fabric.js, Satori, Puppeteer"
             />
             <SkillGroup
               label="Database & Backend"
@@ -191,11 +191,11 @@ export default function ResumePage() {
             />
             <SkillGroup
               label="Automation & AI"
-              text="n8n, LLM integrations (Claude, GPT, Gemini, DeepSeek), AI content workflows, TTS, image generation, video workflows"
+              text="n8n, Zapier, Make, large language model (LLM) integration (Claude, GPT, Gemini, DeepSeek), AI-powered workflow automation, prompt engineering, structured outputs, TTS, image generation, video workflows"
             />
             <SkillGroup
-              label="Infrastructure"
-              text="Docker, Coolify, Traefik, Hetzner, Cloudflare R2, Redis, GitHub Actions, CI/CD"
+              label="Infrastructure & Reliability"
+              text="Docker, Coolify, Traefik, Hetzner, Cloudflare R2, Redis, GitHub Actions, CI/CD, system monitoring, debugging and improving automated processes"
             />
             <SkillGroup
               label="Business & Growth"
