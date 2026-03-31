@@ -18,7 +18,7 @@ export const metadata: Metadata = {
 export default function ResumePage() {
   return (
     <>
-      {/* Print button */}
+      {/* Action buttons */}
       <div
         className="no-print"
         style={{
@@ -26,8 +26,26 @@ export default function ResumePage() {
           top: 16,
           right: 16,
           zIndex: 100,
+          display: "flex",
+          gap: 8,
         }}
       >
+        <a
+          href="/portfolio"
+          style={{
+            background: "rgba(124,92,255,0.15)",
+            color: "#7c5cff",
+            border: "1px solid rgba(124,92,255,0.3)",
+            padding: "8px 16px",
+            borderRadius: 8,
+            fontSize: 13,
+            fontWeight: 500,
+            cursor: "pointer",
+            textDecoration: "none",
+          }}
+        >
+          ← Portfolio
+        </a>
         <PrintButton />
       </div>
 
