@@ -110,11 +110,12 @@ export default function ResumePage() {
         <Section title="Summary">
           <p style={{ fontSize: 13.5, lineHeight: 1.7, margin: "0 0 10px" }}>
             Product and systems builder with hands-on experience designing and
-            shipping complex software across SaaS, automation, business
-            workflows, and internal control systems. Strong in TypeScript,
-            Next.js, React, Supabase/PostgreSQL, workflow automation, large
-            language model (LLM) integration, API development, and cost-aware
-            product architecture. I use AI tools (Claude Code, ChatGPT) within
+            shipping production software across SaaS, automation pipelines,
+            business workflows, and internal control systems. Strong in
+            TypeScript, Next.js, React, Supabase/PostgreSQL, workflow
+            automation (n8n), video rendering (ffmpeg), large language model
+            (LLM) integration, API development, and cost-aware product
+            architecture. I use AI tools (Claude Code, ChatGPT) within
             professional development workflows (VS Code, Git, CI/CD) to build
             production-grade, reliable systems — not no-code prototypes. I
             work best on cross-functional problems where product, operations,
@@ -123,12 +124,13 @@ export default function ResumePage() {
           <p style={{ fontSize: 13.5, lineHeight: 1.7, margin: 0 }}>
             I am a problem solver by nature — when I encounter a challenge, I
             study it until I find a solution that is not just functional but
-            improves security, reduces cost, and opens new business
-            opportunities. I think in complete solutions: not the fastest fix,
-            but the one that prevents future problems and creates long-term
-            value. I am in constant learning across technology, marketing, and
-            business — because the best architecture decisions come from
-            understanding all three simultaneously.
+            improves reliability, reduces cost, and opens new business
+            opportunities. I build systems with production-grade patterns:
+            kill switches, circuit breakers, graceful degradation, and
+            measurement frameworks — because knowing a system works is as
+            important as building it. I think in complete solutions: not the
+            fastest fix, but the one that prevents future problems and creates
+            long-term value.
           </p>
         </Section>
 
@@ -159,13 +161,15 @@ export default function ResumePage() {
             period="2025 – Present"
             description="Production automation & orchestration system (live, running daily)"
             bullets={[
-              "Analysed business workflows and built an automated research-to-publishing pipeline that scans 60 topics across multiple sources, scores opportunities, generates content, and publishes across 10 social channels in English and Spanish",
-              "Designed a system with 26 active n8n workflows, 47 database tables, and 14,900+ records",
-              "Automated content production across scripting, voice, music, captions, rendering, and publishing using n8n, Remotion, Supabase, R2, Postiz, and AI providers",
-              "Built a 7-stage audio mastering pipeline and reusable media workflow that reduces production cost and turnaround time over time",
-              "Deployed and maintained reliable self-hosted infrastructure using Hetzner, Docker, Coolify, and Traefik at approximately $43/month with high uptime and automated recovery",
+              "Built and operate 27 production n8n workflows that automate the full content lifecycle: research, scoring, script generation, voice synthesis, video rendering, and publishing across 10 social channels in English and Spanish",
+              "Engineered a short-form video pipeline that produces fully branded videos in 90 seconds at $0.046 per video — replacing 8 hours/week of manual editing with 40 minutes of script review, producing 86 videos/month across two languages",
+              "Built a custom ffmpeg video renderer (12x faster than browser-based Remotion rendering) with word-level subtitle synchronization, B-roll layering, branding overlays, and progress bar — deployed as a Docker containerized API",
+              "Implemented production-grade reliability patterns: kill switches (database toggle to halt pipelines instantly), circuit breakers (auto-pause after 5 errors in 5 minutes), rate limiting on paid API calls, graceful degradation (B-roll fallback chain: Pexels → Pixabay → FLUX AI still), and error-only Telegram alerting to prevent alert fatigue",
+              "Solved infrastructure-level problems including Hetzner IPv4 blocks by building a Cloudflare Worker proxy for ElevenLabs and enabling Docker IPv6 networking, and diagnosed Traefik multi-network routing failures causing 504 timeouts",
+              "Designed a measurement framework tracking render time, cost per video, success rate, and fallback triggers — all logged to Supabase with real cost validation against Cloudflare R2 file sizes",
+              "Deployed and maintain self-hosted infrastructure (Hetzner, Docker, Coolify, Traefik) at $43/month with 47 database tables, 14,900+ records, and automated health monitoring via Telegram bot",
             ]}
-            tech="n8n, Remotion, Supabase, Cloudflare R2, Docker, Traefik, Postiz, OpenAI, Claude API, Stability AI, FLUX, Kling"
+            tech="n8n, ffmpeg, Docker, Supabase, PostgreSQL, Cloudflare R2, Cloudflare Workers, ElevenLabs, Remotion, Traefik, Postiz, Claude API, OpenAI, Stability AI, FLUX"
           />
 
           {/* Website */}
@@ -209,11 +213,11 @@ export default function ResumePage() {
             />
             <SkillGroup
               label="Automation & AI"
-              text="n8n, Zapier, Make, large language model (LLM) integration (Claude, GPT, Gemini, DeepSeek), AI-powered workflow automation, prompt engineering, structured outputs, TTS, image generation, video workflows"
+              text="n8n, Zapier, Make, ffmpeg (video rendering pipelines), large language model (LLM) integration (Claude, GPT, Gemini, DeepSeek), AI-powered workflow automation, prompt engineering, structured outputs, TTS with word-level timestamps, image generation, video production pipelines"
             />
             <SkillGroup
               label="Infrastructure & Reliability"
-              text="Docker, Coolify, Traefik, Hetzner, Cloudflare R2, Redis, GitHub Actions, CI/CD, system monitoring, debugging and improving automated processes"
+              text="Docker, Coolify, Traefik, Hetzner, Cloudflare R2, Cloudflare Workers, Redis, GitHub Actions, CI/CD, kill switches, circuit breakers, rate limiting, graceful degradation, error-only alerting, system monitoring, production debugging"
             />
             <SkillGroup
               label="Business & Growth"
