@@ -42,3 +42,33 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# internal docs (NEVER commit — contains infra details, credentials, brand strategy)
+CLAUDE.md
+GEMINI.md
+AGENTS.md
+accounts-and-api-keys.md
+DEPLOY-INSTRUCTIONS.md
+L7AI-*.md
+L7AI-*.pdf
+wf*-creative-director*.md
+wf*-implementation-handoff*.md
+carousel-*-spec.md
+carousel-*-code.md
+*master-brief*.md
+remotion-carousel-v2/
+images section AI slide/
+Videos Photo Ai*/
+*.BACKUP-*
+
+# secrets
+*.key
+*.pem
+*-credentials.json
+service-account*.json
+.env.*.local
+
+# editor / OS
+.idea/
+.vscode/
+Thumbs.db
