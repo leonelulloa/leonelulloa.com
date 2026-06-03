@@ -251,8 +251,8 @@ export default function PortfolioHub() {
                     <p style={{ fontSize: 12, fontFamily: C.mono, color: C.teal, margin: 0 }}>Production Automation &amp; Orchestration System</p>
                   </div>
                   <div style={{ display: "flex", flexDirection: "column", alignItems: "flex-end", gap: 4 }}>
-                    <span style={{ fontSize: 10, fontFamily: C.mono, background: `${C.green}20`, color: C.green, padding: "3px 10px", borderRadius: 20, animation: "pulse-glow 3s ease infinite" }}>live · running daily</span>
-                    <span style={{ fontSize: 10, fontFamily: C.mono, color: C.dim }}>2025–Present · Solo build</span>
+                    <span style={{ fontSize: 10, fontFamily: C.mono, background: `${C.muted}20`, color: C.muted, padding: "3px 10px", borderRadius: 20 }}>built &amp; operated</span>
+                    <span style={{ fontSize: 10, fontFamily: C.mono, color: C.dim }}>2025–2026 · Solo build</span>
                   </div>
                 </div>
 

@@ -158,8 +158,8 @@ export default function ResumePage() {
           <ExperienceCard
             role="Founder / Automation Engineer"
             project="L7AI Content Intelligence"
-            period="2025 – Present"
-            description="Production automation & orchestration system (live, running daily)"
+            period="2025 – 2026"
+            description="Production automation & orchestration system (built & operated)"
             bullets={[
               "Built and operate 27 production n8n workflows that automate the full content lifecycle: research, scoring, script generation, voice synthesis, video rendering, and publishing across 10 social channels in English and Spanish",
               "Engineered a short-form video pipeline that produces fully branded videos in 90 seconds at $0.046 per video — replacing 8 hours/week of manual editing with 40 minutes of script review, producing 86 videos/month across two languages",

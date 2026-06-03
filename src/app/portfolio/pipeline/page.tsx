@@ -66,7 +66,7 @@ export default function PipelinePage() {
                 <h1 style={{ fontSize: 36, fontWeight: 800, margin: 0, letterSpacing: "-0.02em" }}>
                   L7AI Content Intelligence Pipeline
                 </h1>
-                <p style={{ fontSize: 14, color: C.teal, margin: "4px 0 0", fontWeight: 500 }}>Automated Bilingual Content System · Live · Running Daily</p>
+                <p style={{ fontSize: 14, color: C.teal, margin: "4px 0 0", fontWeight: 500 }}>Automated Bilingual Content System · Built &amp; Operated</p>
               </div>
             </div>
           </FadeIn>
@@ -347,8 +347,8 @@ export default function PipelinePage() {
           <FadeIn>
             <SectionHeader icon="🖥️" title="Infrastructure — $43/month Total" color={C.teal} />
             <p style={{ fontSize: 14, color: C.muted, maxWidth: 700, margin: "8px 0 24px" }}>
-              Two Hetzner servers running Docker containers. Self-hosted everything — no vendor lock-in, full control, fraction of the cost of cloud equivalents.
-              <strong style={{ color: C.teal }}> This data is live from the actual servers.</strong>
+              Two Hetzner servers ran Docker containers. Self-hosted everything — no vendor lock-in, full control, a fraction of the cost of cloud equivalents.
+              <strong style={{ color: C.teal }}> Below is a snapshot of the stack as it ran in production.</strong>
             </p>
           </FadeIn>
 
@@ -377,19 +377,6 @@ export default function PipelinePage() {
             </div>
           </FadeIn>
 
-          {/* Live status link */}
-          <FadeIn delay={300}>
-            <a href="/status" style={{
-              display: "flex", alignItems: "center", justifyContent: "center", gap: 10,
-              marginTop: 20, padding: "14px 24px", borderRadius: 12,
-              background: `${C.green}10`, border: `1px solid ${C.green}25`,
-              textDecoration: "none", color: C.green, fontSize: 14, fontWeight: 600,
-              transition: "background 0.2s, border-color 0.2s",
-            }}>
-              <span style={{ width: 8, height: 8, borderRadius: "50%", background: C.green, boxShadow: `0 0 8px ${C.green}60` }} />
-              View Live System Status & Incident Response Protocol →
-            </a>
-          </FadeIn>
         </div>
       </section>
 
@@ -452,8 +439,8 @@ export default function PipelinePage() {
       <section style={{ padding: "60px 5%", borderTop: `1px solid ${C.border}` }}>
         <FadeIn>
           <div style={{ textAlign: "center", marginBottom: 40 }}>
-            <h2 style={{ fontSize: 28, fontWeight: 700, margin: "0 0 8px" }}>Proof — Live System Screenshots</h2>
-            <p style={{ fontSize: 14, color: C.muted, margin: 0 }}>Real screenshots from production dashboards. URL bars visible. Timestamps verifiable.</p>
+            <h2 style={{ fontSize: 28, fontWeight: 700, margin: "0 0 8px" }}>Proof — Production Screenshots</h2>
+            <p style={{ fontSize: 14, color: C.muted, margin: 0 }}>Real screenshots captured from the production dashboards while the system was running. URL bars and timestamps visible.</p>
           </div>
 
           {/* n8n Workflows */}
@@ -516,16 +503,6 @@ export default function PipelinePage() {
             </div>
           </div>
 
-          {/* Verify CTA */}
-          <div style={{ textAlign: "center", padding: "24px", background: `${C.teal}10`, borderRadius: 14, border: `1px solid ${C.teal}30` }}>
-            <p style={{ fontSize: 14, fontWeight: 600, margin: "0 0 8px" }}>Verify It Yourself</p>
-            <p style={{ fontSize: 12, color: C.muted, margin: "0 0 12px" }}>These endpoints are public — open them in your browser. Response times change on every refresh.</p>
-            <div data-flex="verify-links" style={{ display: "flex", gap: 12, justifyContent: "center", flexWrap: "wrap" }}>
-              <a href="https://leonelulloa.com/api/health" target="_blank" rel="noopener noreferrer" style={{ padding: "8px 16px", background: `${C.teal}20`, color: C.teal, borderRadius: 8, fontSize: 12, fontFamily: C.mono, textDecoration: "none", border: `1px solid ${C.teal}40` }}>/api/health</a>
-              <a href="https://leonelulloa.com/api/infrastructure" target="_blank" rel="noopener noreferrer" style={{ padding: "8px 16px", background: `${C.teal}20`, color: C.teal, borderRadius: 8, fontSize: 12, fontFamily: C.mono, textDecoration: "none", border: `1px solid ${C.teal}40` }}>/api/infrastructure</a>
-              <a href="https://leonelulloa.com/status" target="_blank" rel="noopener noreferrer" style={{ padding: "8px 16px", background: `${C.teal}20`, color: C.teal, borderRadius: 8, fontSize: 12, fontFamily: C.mono, textDecoration: "none", border: `1px solid ${C.teal}40` }}>/status</a>
-            </div>
-          </div>
         </FadeIn>
       </section>
 
@@ -535,10 +512,10 @@ export default function PipelinePage() {
       <footer style={{ padding: "48px 5%", borderTop: `1px solid ${C.border}`, textAlign: "center" }}>
         <FadeIn>
           <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 8px" }}>
-            This system runs <span style={{ color: C.teal }}>every day</span> — automatically
+            This system ran <span style={{ color: C.teal }}>every day</span> — automatically
           </h2>
           <p style={{ fontSize: 14, color: C.muted, margin: "0 0 24px" }}>
-            Live demos, n8n workflow walkthroughs, and Supabase data available on request.
+            Architecture walkthroughs, n8n workflow breakdowns, and code access available on request.
           </p>
           <div style={{ display: "flex", gap: 12, justifyContent: "center" }}>
             <a href="mailto:leonel090810@gmail.com" style={{ background: C.teal, color: "#fff", padding: "10px 24px", borderRadius: 10, fontSize: 14, fontWeight: 600, textDecoration: "none" }}>
